@@ -13,7 +13,7 @@ def extract_energies(output_files_real_path):
                     break
         if energy_line:
             index = energy_line.find('total energy')
-            total_energy_s = energy_line[index + 31: index + 44]
+            total_energy_s = energy_line[index + 29: index + 44]
             total_energy = float(total_energy_s)
             total_energy = total_energy * 13.60569301 # Convert Ry to eV 
             Energies.append(total_energy)
