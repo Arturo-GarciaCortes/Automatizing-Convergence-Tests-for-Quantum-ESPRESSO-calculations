@@ -15,7 +15,7 @@ def extract_energies(output_files_real_path):
             index = energy_line.find('total energy')
             total_energy_s = energy_line[index + 31: index + 44]
             total_energy = float(total_energy_s)
-            total_energy = total_energy / 0.0734985857 # Convert Ry to eV 
+            total_energy = total_energy * 13.60569301 # Convert Ry to eV 
             Energies.append(total_energy)
             filename = os.path.basename(path)  # Extract filename from path using os.path.basename
             print('For file:', filename)
